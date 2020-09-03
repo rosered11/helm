@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "my-helm.fullname" . }}-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: {{ template "my-helm.fullname" . }}-mongodb
+  template:
+    metadata:
+      labels:
+        name: {{ template "my-helm.fullname" . }}-mongodb
+    spec:
+      containers:
+      - name: mongodb-standalone
+        image: mongo:4.0.8
+        env:
+          - name: MONGO_INITDB_ROOT_USERNAME
+            value: {{ .Values.DbUserName }}
+          - name: MONGO_INITDB_ROOT_PASSWORD
+            value: {{ .Values.DbPassword }}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb
+spec:
+  selector:
+    name: mongodb
+  ports:
+    - protocol: TCP
+      port: 27017
+      targetPort: 27017
+  type: NodePort
