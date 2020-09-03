@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mongo-client
+spec:
+  containers:
+  - name: mongo-client
+    image: mongoclient/mongoclient
+    ports:
+      - name: mongo-client
+        containerPort: 3000
+        protocol: TCP
