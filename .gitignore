@@ -1,3 +1,5 @@
 dist/
 node_modules/
 yarn.lock
+digital-ocean/kubeconfig.yaml
+digital-ocean/service_account/kubeconfig-develop.yaml
