@@ -1,22 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongodb-standalone
+  # name: mongodb-standalone
+  name: {{ include "mongodb.fullname" . }}
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: mongodb
+      helm: {{ .Release.Name }}
   template:
     metadata:
       labels:
         name: mongodb
+        helm: {{ .Release.Name }}
     spec:
       containers:
-      - name: mongodb-standalone
+      - name: {{ .Chart.Name }} # mongodb-standalone
         image: mongo:4.0.8
         env:
           - name: MONGO_INITDB_ROOT_USERNAME
-            value: root
+            value: {{ .Values.mongodb.username }}
           - name: MONGO_INITDB_ROOT_PASSWORD
-            value: root
+            value: "{{ .Values.mongodb.password }}_{{ .Values.mongodb.postfixName }}"

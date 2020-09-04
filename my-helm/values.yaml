@@ -1,2 +1,4 @@
-DbUserName: root
-DbPassword: root
+mongodb:
+  username: root
+  postfixName: name
+  password: root

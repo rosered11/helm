@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     name: mongodb
+    helm: {{ .Release.Name }}
   ports:
     - protocol: TCP
       port: 27017
