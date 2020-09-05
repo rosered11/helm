@@ -28,3 +28,5 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)
 - WSL ZSH [link](https://twasa.ml/post/wsl/)
 
 - ZSH powerlevel10k [link](https://awesomeopensource.com/project/romkatv/powerlevel10k)
+
+- ZSH powerlevel9k [link](https://github.com/Powerlevel9k/powerlevel9k)
