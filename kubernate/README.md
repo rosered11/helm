@@ -2,7 +2,7 @@
 
 ## Service Account
 
-## SSH
+## ZSH
 
 This is config in .zshrc for ZSH
 
@@ -15,7 +15,21 @@ POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_last"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)
 ```
 
+### Z Profile
+
+Create .zprofile for zsh. It is profile on zsh.
+
+***Example***
+
+This is set color text in profile
+
+```zsh
+export LS_COLORS='di=34:'
+```
+
 ## Reference
+
+Other
 
 - Kubernetes Components [link](https://kubernetes.io/docs/concepts/overview/components/)
 
@@ -27,6 +41,12 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)
 
 - WSL ZSH [link](https://twasa.ml/post/wsl/)
 
-- ZSH powerlevel10k [link](https://awesomeopensource.com/project/romkatv/powerlevel10k)
+ZSH
 
-- ZSH powerlevel9k [link](https://github.com/Powerlevel9k/powerlevel9k)
+- powerlevel10k [link](https://awesomeopensource.com/project/romkatv/powerlevel10k)
+
+- powerlevel9k [link](https://github.com/Powerlevel9k/powerlevel9k)
+
+- [link](https://www.youtube.com/playlist?list=PLoTScYm9O0GGWXd_4sYsADmM4og6vU1Zh)
+
+- LSCOLOR [link](https://www.youtube.com/watch?v=ACisK2SOeJA)

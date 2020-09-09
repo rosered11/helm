@@ -8,6 +8,8 @@ spec:
   containers:
   - name: mongodb
     image: mongo:4.0.8
+    # set container for pull image on local
+    imagePullPolicy: Never
     env:
     - name: MONGO_INITDB_ROOT_USERNAME
       value: "root"
