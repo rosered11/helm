@@ -1,6 +1,6 @@
  # <img src="../images/mongodb.png" width="" height="30"> Mongodb on <img src="../images/kubernetes.png" width="" height="27"> Kubernetes
 
-## Create Cluster by KinD
+## Create cluster by KinD
 ***[KinD](https://kubernetes.io/blog/2020/05/21/wsl-docker-kubernetes-on-the-windows-desktop/): Kubernetes made easy in a container***. 
 <br>
 <br>
