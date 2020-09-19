@@ -17,3 +17,10 @@ spec:
       value: "root"
     # - name: MONGO_URL
     #   value: "localhost:27017"
+    volumeMounts:
+      - mountPath: "/data/db"
+        name: my-mongo-volume
+  volumes:
+    - name: my-mongo-volume
+      persistentVolumeClaim:
+        claimName: mongo-pvc
